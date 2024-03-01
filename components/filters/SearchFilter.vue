@@ -3,12 +3,12 @@
     <div class="sm:pr-3">
       <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
         <input
-            type="text"
-            name="search"
-            class="search focus:ring-primary-500 focus:border-primary-500"
-            placeholder="Pesquisar..."
+          type="text"
+          name="search"
+          class="search focus:ring-primary-500 focus:border-primary-500"
+          placeholder="Pesquisar..."
         >
-      </div>
+      </div> 
     </div>
   </div>
 </template>

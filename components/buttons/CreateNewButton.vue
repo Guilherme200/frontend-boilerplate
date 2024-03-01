@@ -1,15 +1,21 @@
 <template>
   <NuxtLink :to="link" class="button focus:ring-4 focus:ring-primary-300 focus:outline-none">
-    <PlusIcon class="text-sm text-white"/>
+    <PlusIcon class="text-sm text-white" />
     <span class="mx-2">{{ title }}</span>
   </NuxtLink>
 </template>
-<script setup lang="ts">
-import PlusIcon from "~/components/icons/PlusIcon.vue";
+<script setup lang="ts"> 
+import PlusIcon from '~/components/icons/PlusIcon.vue';
 
 defineProps({
-  title: String,
-  link: String
+  title: {
+    type: String,
+    required: true,
+  },
+  link:  {
+    type: String,
+    required: true,
+  },
 })
 </script>
 

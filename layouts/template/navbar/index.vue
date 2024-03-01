@@ -9,8 +9,8 @@
           </NuxtLink>
         </div>
         <div class="flex items-center">
-          <Notifications/>
-          <Profile/>
+          <Notifications />
+          <Profile />
         </div>
       </div>
     </div>
@@ -18,6 +18,6 @@
 </template>
 
 <script setup lang="ts">
-import Profile from "~/layouts/template/navbar/profile.vue";
-import Notifications from "~/layouts/template/navbar/notifications.vue";
+import Profile from '~/layouts/template/navbar/profile.vue';
+import Notifications from '~/layouts/template/navbar/notifications.vue';
 </script>
