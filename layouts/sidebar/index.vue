@@ -8,7 +8,7 @@
           <ul class="pb-2 space-y-2">
             <li>
               <NuxtLink
-                  to="#"
+                  to="/"
                   class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group"
               >
                 <svg
