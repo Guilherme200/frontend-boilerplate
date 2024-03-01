@@ -1,13 +1,13 @@
 <template>
   <div class="bg-gray-50">
-    <Navbar class="h-[6vh]" />
+    <Navbar class="h-[6vh]"/>
     <div class="flex overflow-hidden bg-gray-50">
       <Sidebar/>
-      <div id="main-content" class="relative w-full overflow-y-auto bg-gray-50 h-[94vh]">
-        <main class="m-4">
-          <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
-            <div class="w-full mb-1">
-              <div class="mb-4">
+      <div class="relative w-full bg-gray-50 h-[94vh]">
+        <main class="p-4 h-full">
+          <div class="p-4 bg-white block sm:flex h-full justify-between border-b border-gray-200 lg:mt-1.5">
+            <div class="w-full h-full">
+              <div class="py-4">
                 <Breadcrumb/>
                 <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">{{ title }}</h1>
               </div>
