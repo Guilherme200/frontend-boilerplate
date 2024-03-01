@@ -1,9 +1,9 @@
 <template>
   <div class="bg-gray-50">
-    <Navbar class="h-[6vh]"/>
+    <Navbar class="h-[8vh]"/>
     <div class="flex overflow-hidden bg-gray-50">
       <Sidebar/>
-      <div class="relative w-full bg-gray-50 h-[94vh]">
+      <div class="relative w-full bg-gray-50 h-[88vh]">
         <main class="p-4 h-full">
           <Breadcrumb/>
           <div class="w-full p-4 bg-white block sm:flex h-full justify-between border-b border-gray-200 lg:mt-1.5">
@@ -15,12 +15,14 @@
         </main>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
 import Navbar from "~/layouts/template/navbar/index.vue";
 import Sidebar from "~/layouts/template/sidebar/index.vue";
+import Footer from "~/layouts/template/footer/index.vue";
 import Breadcrumb from "~/layouts/template/Breadcrumb.vue";
 
 const route = useRoute()

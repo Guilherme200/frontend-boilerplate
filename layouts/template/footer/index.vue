@@ -1,7 +1,7 @@
 <template>
-  <footer class="my-10 text-sm text-center text-gray-500">
-    <span class="mr-1">© 2019-2023</span>
-    <NuxtLink to="#" class="hover:underline" target="_blank">Flowbite.com.</NuxtLink>
-    <span class="ml-1">All rightsreserved.</span>
+  <footer class="sticky text-gray-500 text-sm flex bottom-0 h-[4vh] bg-gray-50 shadow z-50 justify-center items-center">
+    <span class="mr-1">© 2018-2024</span>
+    <NuxtLink to="#" class="hover:underline" target="_blank">Mtcode Sistemas</NuxtLink>
+    <span class="ml-1">Todos os direitos reservados.</span>
   </footer>
 </template>
