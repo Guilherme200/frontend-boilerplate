@@ -40,7 +40,7 @@
 
           <td class="p-4 space-x-2 whitespace-nowrap flex justify-center items-center">
             <button type="button"
-                    class="btn-action bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:ring-red-300">
+                    class="btn-action bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200">
               <EditIcon/>
             </button>
             <button type="button" class="btn-action bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300">

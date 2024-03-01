@@ -5,7 +5,7 @@
         <div class="flex items-center justify-start">
           <NuxtLink to="#" class="flex ml-2 md:mr-24">
             <img src="https://flowbite-admin-dashboard.vercel.app/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo">
-            <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">Flowbite</span>
+            <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap">Mtcode Sistemas</span>
           </NuxtLink>
         </div>
         <div class="flex items-center">
