@@ -19,6 +19,6 @@
 
 <script setup lang="ts">
 
-import Profile from "~/layouts/navbar/profile.vue";
-import Notifications from "~/layouts/navbar/notifications.vue";
+import Profile from "~/layouts/template/navbar/profile.vue";
+import Notifications from "~/layouts/template/navbar/notifications.vue";
 </script>

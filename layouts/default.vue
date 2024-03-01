@@ -22,10 +22,10 @@
 </template>
 
 <script setup lang="ts">
-import Navbar from "~/layouts/navbar/index.vue";
-import Sidebar from "~/layouts/sidebar/index.vue";
-import Footer from "~/layouts/footer/index.vue";
-import Breadcrumb from "~/components/template/Breadcrumb.vue";
+import Navbar from "~/layouts/template/navbar/index.vue";
+import Sidebar from "~/layouts/template/sidebar/index.vue";
+import Footer from "~/layouts/template/footer/index.vue";
+import Breadcrumb from "~/layouts/template/Breadcrumb.vue";
 
 const route = useRoute()
 const title = _get(route.meta, 'title', '')
