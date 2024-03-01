@@ -3,7 +3,9 @@
       <SearchFilter/>
       <CreateNewButton title="Nova categoria" link=""/>
     </div>
+  <div class="mt-5">
     <DataList :headers="headers" :data="data"/>
+  </div>
 </template>
 <script setup lang="ts">
 import DataList from "~/components/datalist/DataList.vue";

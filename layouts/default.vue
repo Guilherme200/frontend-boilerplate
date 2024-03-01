@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-gray-50">
-    <Navbar class="h-[8vh]"/>
-    <div class="flex overflow-hidden bg-gray-50">
+  <div class="bg-gray-100 h-screen">
+    <Navbar/>
+    <div class="flex h-[90vh]">
       <Sidebar/>
-      <div class="relative w-full bg-gray-50 h-[88vh]">
-        <main class="p-4 h-full">
-          <Breadcrumb/>
-          <div class="w-full p-4 bg-white block sm:flex h-full justify-between border-b border-gray-200 lg:mt-1.5">
-            <div class="w-full h-full">
+      <div class="relative w-full">
+        <main class="px-4 pt-4 overflow-y-auto flex h-full flex-col">
+          <Breadcrumb class="flex-none"/>
+          <div class="w-full p-4 bg-white border-b border-gray-200 grow overflow-y-auto">
+            <div class="w-full flex-none">
               <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl mb-4">{{ title }}</h1>
               <slot/>
             </div>
@@ -15,7 +15,6 @@
         </main>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
