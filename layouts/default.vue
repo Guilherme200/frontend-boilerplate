@@ -7,6 +7,10 @@
         <main class="px-4 pt-6">
           <div class="p-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 lg:mt-1.5">
             <div class="w-full mb-1">
+              <div class="mb-4">
+                <Breadcrumb/>
+                <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">{{ title }}</h1>
+              </div>
               <slot/>
             </div>
           </div>
@@ -21,4 +25,8 @@
 import Navbar from "~/layouts/navbar/index.vue";
 import Sidebar from "~/layouts/sidebar/index.vue";
 import Footer from "~/layouts/footer/index.vue";
+import Breadcrumb from "~/components/template/Breadcrumb.vue";
+
+const route = useRoute()
+const title = _get(route.meta, 'title', '')
 </script>

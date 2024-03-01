@@ -1,9 +1,5 @@
 <template>
   <div>
-    <div class="mb-4">
-      <Breadcrumb/>
-      <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">All products</h1>
-    </div>
     <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100">
       <div class="flex items-center mb-4 sm:mb-0">
         <div class="sm:pr-3">
@@ -1360,13 +1356,12 @@
   </div>
 </template>
 <script setup lang="ts">
-import Breadcrumb from "~/components/template/Breadcrumb.vue";
 
 definePageMeta({
   title: 'Categorias',
   breadcrumb: [
     {link: '/', title: 'Home'},
-    {link: null, title: 'Categorias'},
+    {link: '', title: 'Categorias'},
   ]
 })
 </script>

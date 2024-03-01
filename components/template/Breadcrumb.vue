@@ -1,51 +1,25 @@
 <template>
-  <fwb-breadcrumb class="mb-5">
-    <fwb-breadcrumb-item home href="#">
-      <template #home-icon>
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"/>
-        </svg>
-      </template>
-      Home
-    </fwb-breadcrumb-item>
-    <fwb-breadcrumb-item href="#">
-      <template #arrow-icon>
-        <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        </svg>
-      </template>
-      Projects
-    </fwb-breadcrumb-item>
-    <fwb-breadcrumb-item>
-      <template #arrow-icon>
-        <svg class="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-             xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        </svg>
-      </template>
-      Flowbite
-    </fwb-breadcrumb-item>
-  </fwb-breadcrumb>
+  <nav class="flex mb-5" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 text-sm font-medium md:space-x-2">
+      <li class="inline-flex items-center" v-for="(item, index) in breadcrumb">
+        <NuxtLink
+            :to="item?.link"
+            class="inline-flex items-center text-gray-700 hover:text-primary-600"
+        >
+          <HomeIcon v-if="index === 0"/>
+          <ArrowRightIcon v-else/>
+          {{ item?.title }}
+        </NuxtLink>
+      </li>
+    </ol>
+  </nav>
 </template>
 
 <script setup lang="ts">
-import {FwbBreadcrumb, FwbBreadcrumbItem} from 'flowbite-vue'
 
-interface IPageMeta {
-  title: string,
-  breadcrumb: object[]
-}
+import HomeIcon from "~/components/icons/HomeIcon.vue";
+import ArrowRightIcon from "~/components/icons/ArrowRightIcon.vue";
 
 const route = useRoute()
-const pageMeta: IPageMeta = {
-  title: 'ded',
-  breadcrumb: []
-}
-
-onMounted(() => {
-  console.log(pageMeta.title)
-})
+const breadcrumb = _get(route.meta, 'breadcrumb', [])
 </script>
