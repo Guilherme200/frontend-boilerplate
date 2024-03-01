@@ -1,40 +1,9 @@
 <template>
   <div>
     <div class="items-center justify-between block sm:flex md:divide-x md:divide-gray-100">
-      <div class="flex items-center mb-4 sm:mb-0">
-        <div class="sm:pr-3">
-          <label for="products-search" class="sr-only">Search</label>
-          <div class="relative w-48 mt-1 sm:w-64 xl:w-96">
-            <input
-                type="text"
-                name="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Search for products"
-            >
-          </div>
-        </div>
-
-        <div class="flex items-center w-full sm:justify-end">
-          <div class="flex pl-2 space-x-1">
-            <a href="#"
-               class="inline-flex justify-center p-1 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                   fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M10 11h2v5m-2 0h4m-2.6-8.5h0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-      <button
-          class="text-white bg-primary hover:bg-primary focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
-          type="button"
-      >
-        Add new product
-      </button>
+      <SearchFilter />
+      <CreateNewButton title="Nova categoria" link=""/>
     </div>
-
 
     <div class="flex flex-col mt-5">
       <div class="overflow-x-auto">
@@ -1356,6 +1325,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import CreateNewButton from "~/components/buttons/CreateNewButton.vue";
+import SearchFilter from "~/components/filters/SearchFilter.vue";
 
 definePageMeta({
   title: 'Categorias',
