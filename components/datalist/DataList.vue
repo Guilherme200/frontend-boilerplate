@@ -94,8 +94,10 @@
         </div>
       </div>
     </div>
+    <Pagination />
   </div>
 
 </template>
 <script setup lang="ts">
+import Pagination from "~/components/datalist/Pagination.vue";
 </script>
