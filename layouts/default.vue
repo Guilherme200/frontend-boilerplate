@@ -5,12 +5,10 @@
       <Sidebar/>
       <div class="relative w-full bg-gray-50 h-[94vh]">
         <main class="p-4 h-full">
-          <div class="p-4 bg-white block sm:flex h-full justify-between border-b border-gray-200 lg:mt-1.5">
+          <Breadcrumb/>
+          <div class="w-full p-4 bg-white block sm:flex h-full justify-between border-b border-gray-200 lg:mt-1.5">
             <div class="w-full h-full">
-              <div class="py-4">
-                <Breadcrumb/>
-                <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl">{{ title }}</h1>
-              </div>
+              <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl mb-4">{{ title }}</h1>
               <slot/>
             </div>
           </div>
