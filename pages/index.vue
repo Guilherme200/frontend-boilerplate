@@ -4,10 +4,11 @@
     <CreateNewButton title="Nova categoria" link="" />
   </div>
   <div class="mt-5">
-    <DataList :headers="headers" :data="data" />
+    <DataList :headers="headers" :data="data.data" />
   </div>
 </template>
 <script setup lang="ts">
+import axios from 'axios'
 import DataList from '~/components/datalist/DataList.vue';
 import SearchFilter from '~/components/filters/SearchFilter.vue';
 import CreateNewButton from '~/components/buttons/CreateNewButton.vue';
@@ -20,32 +21,7 @@ const headers = [
   {key: 'updatedAt', label: 'Editado em'},
 ]
 
-const data = [
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-  {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
-]
+const {data} = await axios.get('/api/categories')
 
 definePageMeta({
   title: 'Categorias',

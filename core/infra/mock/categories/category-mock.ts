@@ -1,0 +1,30 @@
+export const categoryMock = (mock: any) => {
+  mock.onGet('/api/categories').reply(200, {
+    data: [
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+      {id: '#194556', name: 'Angular', description: 'Start developing', createdAt: '12/12/2023', updatedAt: '12/12/2023'},
+    ],
+  })
+}
