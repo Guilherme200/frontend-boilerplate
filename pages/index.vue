@@ -20,7 +20,13 @@ const headers = [
   {key: 'updatedAt', label: 'Editado em'},
 ]
 
-const {data} = {data: {data: []}}
+const {data} = await useFetch('/api/categories', {
+  method: 'GET',
+  headers: [
+    ['Content-Type', 'application/json'],
+    ['Content-Type', 'text/plain'],
+  ],
+})
 
 definePageMeta({
   title: 'Categorias',
