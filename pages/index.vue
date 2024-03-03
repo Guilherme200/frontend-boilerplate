@@ -4,7 +4,7 @@
     <CreateNewButton title="Nova categoria" link="" />
   </div>
   <div class="mt-5">
-    <DataList :headers="headers" :data="data.data" />
+    <DataList :headers="headers" :data="data.data || []" />
   </div>
 </template>
 <script setup lang="ts">

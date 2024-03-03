@@ -30,7 +30,17 @@
         </thead>
 
         <tbody class="bg-white divide-y divide-gray-200">
-          <tr v-for="(item,index) in data" :key="index" class="hover:bg-gray-100 dark:hover:bg-gray-700">
+          <tr v-if="data.length <= 0" class="hover:bg-gray-100 dark:hover:bg-gray-700">
+            <td class="w-4 p-4 text-center" colspan="100%">
+              <label>Nenhum item encontrado</label>
+            </td>
+          </tr>
+          <tr
+            v-for="(item,index) in data"
+            v-else
+            :key="index"
+            class="hover:bg-gray-100 dark:hover:bg-gray-700"
+          >
             <td class="w-4 p-4">
               <div class="flex items-center">
                 <input

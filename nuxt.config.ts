@@ -6,6 +6,15 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     '@nuxtjs/tailwindcss',
   ],
+
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.BASE_URL,
+      mockActive: process.env.MOCK_ACTIVE,
+      mockBaseUrl: process.env.MOCK_BASE_URL,
+    },
+  },
+
   lodash: {
     prefix: '_',
     prefixSkip: ['string'],
