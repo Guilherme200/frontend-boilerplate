@@ -57,7 +57,9 @@
               :key="index"
               class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400"
             >
-              {{ item[header.key] }}
+              <slot :name="columnSlotName(header.key)" :item="item">
+                {{ getItemAttr(item, header.key) }}
+              </slot>
             </td>
 
             <td class="p-4 space-x-2 whitespace-nowrap flex justify-center items-center">
@@ -82,6 +84,7 @@
 import Pagination from '~/components/datalist/Pagination.vue';
 import TrashIcon from '~/components/icons/TrashIcon.vue';
 import EditIcon from '~/components/icons/EditIcon.vue';
+import {_camelCase} from '#imports';
 
 defineProps({
   headers: {
@@ -93,6 +96,14 @@ defineProps({
     required: true,
   },
 })
+
+function getItemAttr(item: any, attr: any) {
+  return _get(item, attr, '-')
+}
+
+function columnSlotName(headerValue: any) {
+  return 'column' + _upperFirst(_camelCase(headerValue))
+}
 </script>
 
 <style scoped>
