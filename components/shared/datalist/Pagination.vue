@@ -23,9 +23,13 @@
     </div>
 
     <nav class="flex justify-center items-center text-gray-600 mt-8 lg:mt-0">
-      <NuxtLink to="" class="p-2 mr-2 rounded hover:bg-gray-100">
+      <button
+        type="button"
+        class="p-2 mr-2 rounded hover:bg-gray-100"
+        @click="fetchPrevPage"
+      >
         <AngleLeftIcon />
-      </NuxtLink>
+      </button>
       <NuxtLink to="" class="px-4 py-2 text-gray-500 text-sm rounded hover:bg-gray-100">
         1
       </NuxtLink>
@@ -50,9 +54,9 @@
       <NuxtLink to="" class="px-4 py-2 text-gray-500 text-sm rounded hover:bg-gray-100">
         12
       </NuxtLink>
-      <a href="#" class="p-2 ml-2 rounded hover:bg-gray-100">
+      <button type="button" class="p-2 ml-2 rounded hover:bg-gray-100" @click="fetchNextPage">
         <AngleRightIcon />
-      </a>
+      </button>
     </nav>
   </div>
 </template>
@@ -60,7 +64,8 @@
 import AngleLeftIcon from '~/components/shared/icons/AngleLeftIcon.vue';
 import AngleRightIcon from '~/components/shared/icons/AngleRightIcon.vue';
 
-defineProps({
+const emit = defineEmits(['changePage'])
+const props = defineProps({
   pagination: {
     type: Object,
     required: false,
@@ -69,4 +74,35 @@ defineProps({
     },
   },
 })
+
+const meta = {
+  from: _get(props.pagination, 'from', 1),
+  lastPage:  _get(props.pagination, 'last_page', 1),
+  perPage:  _get(props.pagination, 'per_page', 10),
+  total:  _get(props.pagination, 'total', 1),
+  currentPage:  _get(props.pagination, 'current_page', 1),
+}
+
+const enabledPrevPageButton = computed(() => meta.currentPage > 1)
+const enabledNextPageButton = computed(() => meta.currentPage < meta.total)
+
+function fetchPrevPage() {
+  if (enabledPrevPageButton.value) {
+    changePage(meta.currentPage - 1)
+  }
+}
+
+function fetchNextPage() {
+  if (enabledNextPageButton.value) {
+    changePage(meta.currentPage + 1)
+  }
+}
+
+function changePage(page:number) {
+  if (page !== meta.currentPage) {
+    emit('changePage', page)
+    console.log(page)
+    console.log(meta.currentPage)
+  }
+}
 </script>

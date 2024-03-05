@@ -1,6 +1,7 @@
+import {delay} from 'msw';
 
 export const listCategories = (http: any, HttpResponse:any) => {
-  return http.get('/api/categories', () => {
+  return http.get('/api/categories', async(): Promise<any> => {
     return HttpResponse.json({
       'data': [
         {
@@ -14,11 +15,11 @@ export const listCategories = (http: any, HttpResponse:any) => {
       'meta': {
         'current_page': 1,
         'from': 1,
-        'last_page': 1,
+        'last_page': 2,
         'per_page': 10,
         'to': 1,
         'total': 1,
       },
-    })
+    }, {status: 200})
   })
 }
