@@ -1,5 +1,5 @@
 <template>
-  <DataList :headers="headers" :data="data?.data" />
+  <DataList :headers="headers" :data="data?.data" :meta="data?.meta" />
 </template>
 <script setup lang="ts">
 import DataList from '~/components/shared/datalist/DataList.vue';

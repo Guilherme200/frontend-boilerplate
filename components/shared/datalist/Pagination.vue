@@ -59,4 +59,14 @@
 <script setup lang="ts">
 import AngleLeftIcon from '~/components/shared/icons/AngleLeftIcon.vue';
 import AngleRightIcon from '~/components/shared/icons/AngleRightIcon.vue';
+
+defineProps({
+  pagination: {
+    type: Object,
+    required: false,
+    default() {
+      return {}
+    },
+  },
+})
 </script>

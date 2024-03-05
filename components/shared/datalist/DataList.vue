@@ -63,7 +63,7 @@
       </table>
     </div>
   </div>
-  <Pagination />
+  <Pagination :pagination="meta" />
 </template>
 <script setup lang="ts">
 import Pagination from './Pagination.vue';
@@ -76,6 +76,16 @@ defineProps({
   data: {
     type: Array,
     required: true,
+    default() {
+      return []
+    },
+  },
+  meta: {
+    type: Object,
+    required: false,
+    default() {
+      return {}
+    },
   },
 })
 

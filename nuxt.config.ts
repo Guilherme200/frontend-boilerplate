@@ -9,9 +9,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBaseUrl: process.env.BASE_URL,
       mockActive: process.env.MOCK_ACTIVE,
-      mockBaseUrl: process.env.MOCK_BASE_URL,
+      apiBaseUrl: process.env.API_BASE_URL,
     },
   },
 
