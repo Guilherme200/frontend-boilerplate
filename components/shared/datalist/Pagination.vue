@@ -57,6 +57,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import AngleLeftIcon from '~/components/icons/AngleLeftIcon.vue';
-import AngleRightIcon from '~/components/icons/AngleRightIcon.vue';
+import AngleLeftIcon from '~/components/shared/icons/AngleLeftIcon.vue';
+import AngleRightIcon from '~/components/shared/icons/AngleRightIcon.vue';
 </script>

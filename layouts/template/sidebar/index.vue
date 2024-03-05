@@ -74,13 +74,13 @@
 </template>
 
 <script setup lang="ts">
-import ChartIcon from '~/components/icons/ChartIcon.vue';
-import GridIcon from '~/components/icons/GridIcon.vue';
-import NoteIcon from '~/components/icons/NoteIcon.vue';
-import ShoppingIcon from '~/components/icons/ShoppingIcon.vue';
-import UserGroupIcon from '~/components/icons/UserGroupIcon.vue';
-import UsersIcon from '~/components/icons/UsersIcon.vue';
-import CalendarIcon from '~/components/icons/CalendarIcon.vue';
+import ChartIcon from '~/components/shared/icons/ChartIcon.vue';
+import GridIcon from '~/components/shared/icons/GridIcon.vue';
+import NoteIcon from '~/components/shared/icons/NoteIcon.vue';
+import ShoppingIcon from '~/components/shared/icons/ShoppingIcon.vue';
+import UserGroupIcon from '~/components/shared/icons/UserGroupIcon.vue';
+import UsersIcon from '~/components/shared/icons/UsersIcon.vue';
+import CalendarIcon from '~/components/shared/icons/CalendarIcon.vue';
 </script>
 
 <style scoped>

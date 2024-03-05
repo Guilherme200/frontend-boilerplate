@@ -4,29 +4,13 @@
     <CreateNewButton title="Nova categoria" link="" />
   </div>
   <div class="mt-5">
-    <DataList :headers="headers" :data="data?.data" />
+    <ListCategories />
   </div>
 </template>
 <script setup lang="ts">
-import DataList from '~/components/datalist/DataList.vue';
-import SearchFilter from '~/components/filters/SearchFilter.vue';
-import CreateNewButton from '~/components/buttons/CreateNewButton.vue';
-
-const headers = [
-  {key: 'id', label: 'ID'},
-  {key: 'name', label: 'Nome'},
-  {key: 'description', label: 'Descrição'},
-  {key: 'createdAt', label: 'Criado em'},
-  {key: 'updatedAt', label: 'Editado em'},
-]
-
-const {data} = await useFetch('/api/categories', {
-  method: 'GET',
-  headers: [
-    ['Content-Type', 'application/json'],
-    ['Content-Type', 'text/plain'],
-  ],
-})
+import SearchFilter from '~/components/shared/filters/SearchFilter.vue';
+import CreateNewButton from '~/components/shared/buttons/CreateNewButton.vue';
+import ListCategories from '~/components/admin/categories/ListCategories.vue';
 
 definePageMeta({
   title: 'Categorias',

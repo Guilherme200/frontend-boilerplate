@@ -64,9 +64,9 @@
   </div>
 </template>
 <script setup lang="ts">
-import NotificationIcon from '~/components/icons/NotificationIcon.vue';
-import MessageIcon from '~/components/icons/MessageIcon.vue';
-import EyeIcon from '~/components/icons/EyeIcon.vue';
+import MessageIcon from '~/components/shared/icons/MessageIcon.vue';
+import EyeIcon from '~/components/shared/icons/EyeIcon.vue';
+import NotificationIcon from '~/components/shared/icons/NotificationIcon.vue';
 
 const dropdown = ref(false)
 const notifications = ref([

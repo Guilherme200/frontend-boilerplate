@@ -23,9 +23,6 @@
             >
               {{ item.label }}
             </th>
-            <th scope="col" class="flex header justify-center">
-              Ações
-            </th>
           </tr>
         </thead>
 
@@ -61,18 +58,6 @@
                 {{ getItemAttr(item, header.key) }}
               </slot>
             </td>
-
-            <td class="p-4 space-x-2 whitespace-nowrap flex justify-center items-center">
-              <button
-                type="button"
-                class="btn-action bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-200"
-              >
-                <EditIcon />
-              </button>
-              <button type="button" class="btn-action bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300">
-                <TrashIcon />
-              </button>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -81,10 +66,7 @@
   <Pagination />
 </template>
 <script setup lang="ts">
-import Pagination from '~/components/datalist/Pagination.vue';
-import TrashIcon from '~/components/icons/TrashIcon.vue';
-import EditIcon from '~/components/icons/EditIcon.vue';
-import {_camelCase} from '#imports';
+import Pagination from './Pagination.vue';
 
 defineProps({
   headers: {
@@ -107,10 +89,6 @@ function columnSlotName(headerValue: any) {
 </script>
 
 <style scoped>
-.btn-action {
-  @apply inline-flex items-center justify-center p-2 text-sm font-medium text-center text-white rounded-lg
-}
-
 .header {
   @apply p-4 text-xs font-medium text-left text-gray-500 uppercase
 }

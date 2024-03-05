@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import HomeIcon from '~/components/icons/HomeIcon.vue';
-import ArrowRightIcon from '~/components/icons/ArrowRightIcon.vue';
+import ArrowRightIcon from '~/components/shared/icons/ArrowRightIcon.vue';
+import HomeIcon from '~/components/shared/icons/HomeIcon.vue';
 
 const route = useRoute()
 const breadcrumb = _get(route.meta, 'breadcrumb', [])

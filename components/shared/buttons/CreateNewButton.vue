@@ -5,7 +5,7 @@
   </NuxtLink>
 </template>
 <script setup lang="ts"> 
-import PlusIcon from '~/components/icons/PlusIcon.vue';
+import PlusIcon from '../icons/PlusIcon.vue';
 
 defineProps({
   title: {
