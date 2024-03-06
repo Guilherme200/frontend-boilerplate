@@ -1,5 +1,12 @@
 <template>
-  <DataList :headers="headers" :data="data?.data" :meta="data?.meta" />
+  <DataList :headers="headers" :data="data?.data" :meta="data?.meta">
+    <template #columnCreatedAt="{item}">
+      {{ useFormatOutputDate(item?.createdAt) }}
+    </template>
+    <template #columnUpdatedAt="{item}">
+      {{ useFormatOutputDate(item?.updatedAt) }}
+    </template>
+  </DataList>
 </template>
 <script setup lang="ts">
 import DataList from '~/components/shared/datalist/DataList.vue';

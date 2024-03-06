@@ -2,6 +2,6 @@ import {delay} from 'msw';
 
 export default(http: any) => [
   http.all('*', async () => {
-    await delay(1000)
+    await delay(0)
   }),
 ]
