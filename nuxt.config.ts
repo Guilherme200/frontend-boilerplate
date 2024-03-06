@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   ssr:false,
   devtools: { enabled: true },
   modules: [
+    'dayjs-nuxt',
     'nuxt-lodash',
     '@nuxtjs/tailwindcss',
   ],
