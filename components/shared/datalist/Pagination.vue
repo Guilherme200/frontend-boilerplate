@@ -6,7 +6,9 @@
     </div>
     <div class="flex flex-col lg:flex-row items-center text-sm">
       <label class="text-gray-500 mt-4 mr-2 lg:mt-0">Itens por página:</label>
-      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block">
+      <select
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block"
+      >
         <option selected>
           10
         </option>
@@ -15,7 +17,7 @@
         </option>
         <option value="20">
           20
-        </option> 
+        </option>
         <option value="25">
           25
         </option>
@@ -77,10 +79,10 @@ const props = defineProps({
 
 const meta = {
   from: _get(props.pagination, 'from', 1),
-  lastPage:  _get(props.pagination, 'last_page', 1),
-  perPage:  _get(props.pagination, 'per_page', 10),
-  total:  _get(props.pagination, 'total', 1),
-  currentPage:  _get(props.pagination, 'current_page', 1),
+  lastPage: _get(props.pagination, 'last_page', 1),
+  perPage: _get(props.pagination, 'per_page', 10),
+  total: _get(props.pagination, 'total', 1),
+  currentPage: _get(props.pagination, 'current_page', 1),
 }
 
 const enabledPrevPageButton = computed(() => meta.currentPage > 1)
@@ -98,11 +100,9 @@ function fetchNextPage() {
   }
 }
 
-function changePage(page:number) {
+function changePage(page: number) {
   if (page !== meta.currentPage) {
     emit('changePage', page)
-    console.log(page)
-    console.log(meta.currentPage)
   }
 }
 </script>

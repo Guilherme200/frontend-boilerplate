@@ -1,5 +1,3 @@
-import {delay} from 'msw';
-
 export const listCategories = (http: any, HttpResponse:any) => {
   return http.get('/api/categories', async(): Promise<any> => {
     return HttpResponse.json({
